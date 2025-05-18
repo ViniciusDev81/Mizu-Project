@@ -1,0 +1,8 @@
+SELECT 
+    p.id_pedidos,
+    c.nome AS nome_produto,
+    p.quantidade_produto,
+    p.preco_produto,
+    (p.quantidade_produto * p.preco_produto) AS total
+FROM pedidos p
+JOIN cardapio c ON p.id_cardapio = c.id_cardapio;
